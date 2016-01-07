@@ -1,3 +1,6 @@
-phrase = "hello world"
+saying = "hello world"
 
-print(phrase)
+name = input("What is your name? ")
+output = saying = " " = name
+
+print(output)
