@@ -7,19 +7,25 @@ def main():
 
 	entree=input("The door locked behind you and it smells almost as bad as you!"
 		" you have two directions to choose from"
-		"Hurry! Which way will you go? west or east")
-
+		"Hurry! Which way will you go? west or  east  ")
+	if entree == "B":
+		exit()
 	if entree=="west":
 		lions()
 	elif entree=="east":
 		snakeroom() 
 	else:
 		ass()
+		main()
+	
 
 
 def lions():
 	print("You dummy! You entered a room full of Lions."
-			" You are Dead unless you go back.")
+			" You are Dead get out!." )
+	
+	if entree == "B":
+		exit()
 
 
 def snakeroom ():
@@ -28,14 +34,17 @@ def snakeroom ():
 	entree=input(" See all those little holes in wall?"
 		" Yes you do dummy! So in 20"
 		"seconds the room will fill with snakes!"
-		" Yes, they want to eat you! You may go down or south."
-		"Hurry! Pick a direction")
+		" Yes, they want to eat you! You may go down or south.      "
+		"Hurry! Pick a direction   ")
 	if entree=="down":
 		win()
 	elif entree=="south":
 		dragon()
 	else:
 		ass()
+		main()
+	if entree == "B":
+		exit()
 
 def win():
 	print("You Win Dummy...I mean Good Job Homie! Stay Golden!")
@@ -46,3 +55,7 @@ def dragon():
 
 def ass():
 	print("Did I say that was an option? You die dummy!")
+
+
+
+main()
