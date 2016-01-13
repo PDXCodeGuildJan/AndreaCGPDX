@@ -7,6 +7,7 @@ words = ["art", "Dali", "contrapposto", "rococo", "impressionism", "realism", "d
 numWrong = 0
 listedWord = [None]
 
+
 # A function that starts and plays the hangperson game.
 # Users can be wrong a maximum of 5 times before they lose,
 # the 6th wrong guess triggering Game Over.
@@ -33,19 +34,22 @@ def hangperson():
    currentState = []
    for x in listedWord: 
       currentState.append("_")
+   # Initialize wrong guess
+   incorrect = []
 
    # Print the initial state of the game
-   printHangperson(currentState)
+   printHangperson(currentState, incorrect)
 
    # Start the game! Loop until the user either wins or loses
    while currentState != listedWord and numWrong < 6:
       #ask user to guess
       guess = userGuess()
-
+      bundledList = updateState(guess, currentState,incorrect)
+      currentState = bundledList[0]
+      incorrect = bundledList [1]
 # see if the guess is in the word, update accordingly 
-      currentState = updateState(guess, currentState)
 
-      printHangperson(currentState)
+      printHangperson(currentState, incorrect)
 
 
    # Determine if the user won or lost, and then tell them accordingly
@@ -67,7 +71,7 @@ def hangperson():
 
 
 
-def updateState(guess, currentState):
+def updateState(guess, currentState, incorrect):
    global numWrong
 
    # First, determine if the letter guessed is in the word.
@@ -77,6 +81,8 @@ def updateState(guess, currentState):
    if numInWord== 0:
       print ("You wrong sucka!")
       numWrong = numWrong + 1
+      # adds wrong guess to end of wrong guesses 
+      incorrect.append(guess)
       # numWrong +=1
    elif numInWord > 0:
       print(str(numInWord) + guess + "'s  are in the word. Yes! Smarty Pants!")
@@ -97,7 +103,7 @@ def updateState(guess, currentState):
          #see if letter is in word index
 
 
-   return currentState
+   return [currentState, incorrect]
 
 
 # This helpful function prompts the user for a guess,
@@ -124,7 +130,7 @@ def userGuess():
 # DO NOT CHANGE
 #
 # state: current state of the word
-def printHangperson(state):
+def printHangperson(state, incorrect):
    person = [" O "," | \n | ", "\| \n | ", "\|/\n | ", "\|/\n | \n/  ", "\|/\n | \n/ \\"]
    print()
 
@@ -140,6 +146,8 @@ def printHangperson(state):
       print(i, end=" ")
 
    print("\n")
+   print(incorrect)
+   print()
 
 # This line runs the program on import of the module
 hangperson()
