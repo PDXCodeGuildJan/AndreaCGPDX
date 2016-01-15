@@ -3,7 +3,7 @@ def main():
 	usl=[8,4,6,3,5,2,1]
 
 	print("Unsorted:", usl)
-	sorted_list = selection_sort(usl)
+	sorted_list = bubble_sort(usl)
 	print("Sorted:", sorted_list)
 
 def selection_sort(usl):
@@ -46,6 +46,41 @@ def selection_sort(usl):
 
 
 	return usl
+# take unsorteded list
+
+def bubble_sort(unsl):
+	
+	length= len(unsl)
+
+
+	unsrtlength= length
+	while unsrtlength > 1:
+
+		xindex= 0
+
+		while xindex < length - 1:
+			now=xindex
+			next=xindex +1 
+		
+			if unsl[now]> unsl[next]:
+				temp=unsl[now]
+				unsl[now]= unsl[next]
+				unsl[next]= temp
+
+			xindex += 1 
+		unsrtlength -= 1
+	return unsl
+
+
+# find first vaule in unslist 
+	# compare vaule found and next value in the unsl
+	# if 1st is larger then swap vaules 
+	# move to next index
+	# if the next index is last in the unsorted section of the list  start at 1st step.  
+# if the 1st vaule in the unsl is the last vaule in the unsorted list them stop. 
+
+
+
 
 
 			
