@@ -6,43 +6,11 @@ def main():
 	sorted_list = bubble_sort(usl)
 	print("Sorted:", sorted_list)
 
-def selection_sort(usl):
+def swap(usl, index_a, index_b):
+	usl[index_a], usl [index_b]= usl[index_b], usl[index_a]
 	
 	# find unsorted list 
-	index = 0
-
-	numInlist = len(usl)
-
 	
-	
-	# repeat until there are no more numbers
-	while index < numInlist:
-		#so the variable should be in the loop it will be used in 
-		#always start looking at the start of the usnorted part of list
-		#that is why we put index there 
-		nownumIndex = index
-
-		lowIndex = nownumIndex
-		# find smallest number in list 
-
-		#looping thru unsorted part of list and index indicates begining of unsorted part
-		while nownumIndex < len(usl):
-		
-			#if the the nmber we are looking at now is smaller then the lowest number in place 0 in the index then...
-			if usl[nownumIndex] < usl[lowIndex]:
-				#take lowest # in unsorted list makes it the smallest number 
-				lowIndex=nownumIndex
-			# now we are looking at the next index 
-			nownumIndex += 1
-
-		# swap smallest number with first number in list 
-		
-		temp= usl[index]
-		usl[index]=usl[lowIndex]
-		usl[lowIndex] =temp
-	
-		# update the 1st num of the unsorted list to be the next number in the unsorted list    
-		index += 1
 
 
 	return usl
@@ -63,9 +31,7 @@ def bubble_sort(unsl):
 			next=xindex +1 
 		
 			if unsl[now]> unsl[next]:
-				temp=unsl[now]
-				unsl[now]= unsl[next]
-				unsl[next]= temp
+				swap(unsl, now, next)
 
 			xindex += 1 
 		unsrtlength -= 1
@@ -79,11 +45,30 @@ def bubble_sort(unsl):
 	# if the next index is last in the unsorted section of the list  start at 1st step.  
 # if the 1st vaule in the unsl is the last vaule in the unsorted list them stop. 
 
+def insert_sort(usl):
+# make a tempcar for the index of the thing 
+# we're currently sort
+
+	for start_index, vaule in enumerate (usl):
+
+		lost_index= start_index
+		lost_value =vaule
+
+		while (lost_vaule < usl[lost_index -1]
+			and lost_index > 0):
+			usl = selection_sort(usl, lost_index, lost_index-1)
 
 
 
+			#decrement the lost_index
+			lost_index -= 1 
 
-			
 
-main()
+	return usl
+
+# write this for any 
+
+if __name__=="__main__":		
+
+	main()
 

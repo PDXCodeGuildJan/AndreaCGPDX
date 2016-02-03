@@ -111,7 +111,7 @@ def save_phone_book():
 def load_phonebook():
 	global phonebook 
 
-	load_file = open("phonebook.txt", "w")
+	load_file = open("phonebook.txt", "a")
 	load_file.close()
 
 	load_file =  open("phonebook.txt", "r")

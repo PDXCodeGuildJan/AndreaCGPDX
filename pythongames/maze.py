@@ -8,6 +8,7 @@ def main():
 	entree=input("The door locked behind you and it smells almost as bad as you!"
 		" you have two directions to choose from"
 		"Hurry! Which way will you go? west or  east  ")
+
 	if entree == "B":
 		exit()
 	if entree=="west":

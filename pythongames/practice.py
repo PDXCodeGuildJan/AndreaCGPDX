@@ -21,9 +21,13 @@ def forlp(mystring):
 
 
 def main ():
-	#user_input= input("Please insert word: ")
-	#middle_characters (user_input)
-	#loop (user_input)
+	
+
+	user_input= input("Please insert word: ")
+	middle_characters (user_input)
+	loop(user_input 
+	mylist =["poop", "caca", "booboo"]
+	loop(mylist)
 
 	mystring = "I love to art"
 	print (mystring)
@@ -34,6 +38,8 @@ def main ():
 
 	middle_characters(mystring)
 	forlp("poop")
+	mystring("mylist")
+
 	#called a fun 
 
 
