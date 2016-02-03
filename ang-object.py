@@ -55,6 +55,33 @@ class Die:
 | o   o |
 | o   o |
 +-------+ """ }
+
+
+def start():
+		"""	Welcomes player and tells them what the rules are and how to 
+		play and exit---"""
+		print ("Hello Homie! What's shaking? Ya... o .. ya? Well"\
+			"\n maybe you should keep that... to yourself! mmmmkay."\
+			"\n So Welcome to ANGRY DICE!"\
+			"\n Do you wanna know how to play?"\
+			"\n Well I will tell you anyhow." 
+			"\n It is a solo game played with dice. There are 3 rounds."\
+			"\n The object of the game is to roll dice in order from 1 to "\
+			"\n 6 as quickly as you can! "\
+			"\n Round one: The goal is to get a 1 & 2."\
+			"\n If you only roll one of the pair you need,"\
+			"\n you may hold it and roll the other dice until you reach your goal"\
+			"\n number. Once you have the pair you need you may move on to the next"\
+			"\n round. "\
+			"\n Round two: is similar. The goal is to get 3 & 4."\
+			"\n If you roll two 3's aka ANGRY DICE you must go back to start in"\
+			"\n Round 1. You may also hold numbers. "\
+			"\n Round three: The goal is to roll a 5 & 6. You may not hold the"\
+			"\n 6 and if you get two 3's a.k.a Angry Dice the game will kick you"\
+			"\n back to start."\
+			"\n To begin enter (A) to exit enter (E). when prompted to hold a die:"\
+			"\n (y)for yes and (n) for no.")
+		pass
 	   
 
 		
@@ -70,6 +97,20 @@ class Die:
 		return self.possible_value[self.value]
 		 
 
+def test_diehold():
+		ang_game = Angry_Dice()
+		print (ang_game.die_1.is_holding)
+		ang_game.die_1.value = 4
+		print (ang_game.die_2.is_holding)
+		ang_game.die_hold()
+		print (ang_game.die_1.is_holding)
+		print (ang_game.die_2.is_holding)
+		ang_game.validate_hold()
+
+		print (ang_game.die_1.is_holding)
+		print (ang_game.die_2.is_holding)
+
+
 
 
 class Angry_Dice:
@@ -82,40 +123,31 @@ class Angry_Dice:
 			1: [1, 2],
 			2: [3, 4],
 			3: [5, 6]
-			}
-		
-	def start():
-		"""	Welcomes player and tells them what the rules are and how to 
-		play and exit--- Hello Homie! What's shaking? Ya... o .. ya? Well
-		maybe you should keep that... to yourself! mmmmkay. 
-		So Welcome to ANGRY DICE! 
-		Do you wanna know how to play? 
-		Well I will tell you anyhow. 
-		It is a solo game played with "dice". There are 3 rounds. 
-		The object of the game is to roll dice in order from 1 to 
-		6 as quickly as you can! 
-		Round one: The goal is to get a 1 & 2.  
-		If you only roll one of the pair you need,
-		you may hold it and roll the other dice until you reach your goal
-		number. Once you have the pair you need you may move on to the next
-		round. 
-		Round two: is similar. The goal is to get 3 & 4. 
-		If you roll two 3's aka ANGRY DICE you must go back to start in 
-		Round 1. You may also hold numbers. 
-		Round three: The goal is to roll a 5 & 6. You may not hold the 
-		6 and if you get two 3's a.k.a Angry Dice the game will kick you
-		back to start. 
-		To begin enter "A" to exit enter "E" To hold a die 1 press "H" To hold die 2 press "H2" """
-		pass
+			}	
 
-	def die_hold(self, current_round, round_goals):
+	
+
+	def die_hold(self):
 		"""Holds the die that matches the goal vaule"""
 
-		V = input("Would you like to hold a die?")
-		if V == "H"
-			self.holding = True
-		if V =="H2"
-			self.holding = True 
+		V = input("Would you like to hold die 1? (y)es or (n)o? ")
+		if V.lower() == "y":
+			self.die_1.is_holding = True
+
+		V = input ("Would you like to hold die 2? (y)es or (n)o? ") 
+		if V.lower() == "y":
+			self.die_2.is_holding = True 
+
+	def validate_hold(self):
+		"""checks to see if hold is valid and unlocks if not valid"""
+		if self.die_1.is_holding == True and self.die_1.value != self.round_goals[self.current_round] and self.die_1.value != 6:
+			self.die_1.is_holding = False
+			print("Do you think this is a valid hold? Well you are wrong buddy!!! NO HOLD FOR YOU!")
+
+		if self.die_2.is_holding == True and self.die_2.value != self.round_goals[self.current_round] and self.die_2.value != 6:
+			self.die_2.is_holding = False
+			print("Do you think this is a valid hold? Well you are wrong buddy!!! NO HOLD FOR YOU!")
+
 
 		
 
@@ -148,6 +180,7 @@ class Angry_Dice:
 	
 
 if __name__=='__main__':
-	main()
+	test_diehold()
+
 
 
