@@ -14,8 +14,7 @@ class Display(object):
 		pass
 	def draw_win():
 		pass 
-	def validate_guess_format_template(a_str): 
-		pass
+	
 	def draw_loser():
 		pass
 	def get_play_or_quit():
