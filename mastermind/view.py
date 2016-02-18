@@ -29,7 +29,19 @@ class Display:
 	def get_play_or_quit(self):
 		pass
 	def get_user_guess(self):
+		"""This function takes in user input as a str which is a comma 
+		seperated list of the displaynames of the balls (4). It will return a string. There
+		needs to be a prompt for the correct format of input. """
+
+		user_input = input()
+		return user_input 
+
+
+
+	def validate_guess_format_template(string):
 		pass
+
+
 
 def main():
 	pass
