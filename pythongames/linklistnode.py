@@ -75,6 +75,7 @@ def search(self):
 	# i copied all this under here from the google and now i am just going
 	# to futz around with it bc why not 
 	# nope nope nope all wrong
+	#poop
 def delete(self, value):
     current = self.head
     previous = None
