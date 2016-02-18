@@ -1,0 +1,20 @@
+# Angry Dice
+
+Hello! this is a a program that allows you to play ANGRY DICE in the terminal. This project is a practice in objects and classes. Inorder to start the game you access it in the terminal with Python3 ang-object.py and the game begins.  The program will enforce the rules of the game but here are the rules anyway. 
+
+There are three rounds in the game. 
+	
+Round 1 : the goal is to roll both a 1 and 2. 
+
+Round 2 : the goal is to roll both a 3 and 4.
+
+Round 3 : the goal is to roll both a 5 and 6.
+ 
+If ever two 3's are rolled - The Dice become ANGRY! and you go back to start. 
+
+If you roll 1 out of the 2 numbers needed in a round. You may hold that number and roll the other dice. Unless it is a 6.  The program will ask if you wan to hold the dice each roll. Answer y for yes and anything else for no. 
+
+Winning 
+once you win the round it says woot woot woot. And the next round begins. Once you reached the final round and win there is a special message just for you. The game automagically assumes you want to continue playing and continues unless you exit the console. 
+
+Good Luck. 

@@ -1,0 +1,21 @@
+body{
+				text-align:center; 
+				background: black; 
+				margin: 5%;
+				font-family: 'Lakki Reddy', cursive;}
+			section{
+				background-color: rgb(0, 229, 230);
+				border-style: solid; 
+				border-width: 3em; 
+				border-color: rgb(153, 204, 0);
+			}
+			img{
+				border-style: solid; 
+				border-width: 4em; 
+				border-color: rgb(115, 38, 115); 
+				margin: 1%;
+			}
+			h1{
+				font-size: 3em; 
+				background: url(flowers.jpg);
+			}
