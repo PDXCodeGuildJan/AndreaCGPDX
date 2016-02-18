@@ -1,15 +1,28 @@
 class Display:
-	"""docstring for Display"""
+	"""In the mvc model this display class corresponds to the view."""
+
 	def __init__(self):
-		
+		#this will be a reg ex statement that validates the users input according to format requirments. 
 		self.input_template = ""
 
 	def show_display(self):
+		"""we intend to write a string that will show the entire display at once 
+		insted of updating and showing results bit by bit"""
 		pass
+
+	def draw_welcome(self):
+		"""Displays welcome message and instructions"""
+		pass
+
+
 	def draw_menu(self):
+		"""menu will contain - reminder of instructions, balls bin, format reminder, wins and losses."""
 		pass
+
 	def draw_board_template(self):
+		"""This is a tmeplate for the board itself excluding the munue and user prompt."""
 		pass
+
 	
 	def draw_masters_ballz(self, alist_of_balls):
 		"""The drawing of the master balls: we return a string with the master's hand."""
@@ -22,11 +35,14 @@ class Display:
 		
 
 	def draw_win(self):
+		"""When player wins a display message will pop up that indicates win. Initiate prompt to play another round or quit"""
 		pass 
 	
 	def draw_loser(self):
+		"""When player has reached the maximun amount og guesses a message will appear to denote losing"""
 		pass
 	def get_play_or_quit(self):
+
 		pass
 	def get_user_guess(self):
 		"""This function takes in user input as a str which is a comma 
@@ -39,6 +55,8 @@ class Display:
 
 
 	def validate_guess_format_template(string):
+		"""uses reg ex statement that is called bibidy blop- if user input is incorrectly formated then then program 
+		flow returns to display step while alerting the user they fucked up """
 		pass
 
 
