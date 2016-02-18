@@ -2,12 +2,12 @@ from view import Display
 from model import ModelStuff 
 
 class Game:
-	"""docstring for Game"""
+	""""""
 	def __init__(self):
 
-		def welcome(self):
-			pass
+
 		def start_round(self):
+			"""begins a round"""
 			pass
 
 		"""decide to loop back for valid input
@@ -17,9 +17,11 @@ class Game:
 		 validate_guess_format_template (). Decide if round won or ongoing 
 		 call draw_b_template(all guesses[], turn) """
 
-
+class Round:
+	""""""
 
 def main():
+	
 
 	the_display = Display()
 	a_model = ModelStuff()
