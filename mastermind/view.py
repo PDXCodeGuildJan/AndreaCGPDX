@@ -12,11 +12,11 @@ class Display:
 		pass
 	
 	def draw_masters_ballz(self, alist_of_balls):
-		"""The drawing of the master balls: we return a string with the master's hand. 
-		The hand is a list of random balls."""
+		"""The drawing of the master balls: we return a string with the master's hand."""
 		present_em = ""
-		print (alist_of_balls)
+		
 
+		present_em = str(alist_of_balls[0]) + " " + str(alist_of_balls[1]) + " " + str(alist_of_balls[2]) + " " + str(alist_of_balls[3])
 
 		return present_em
 		
