@@ -54,10 +54,17 @@ class Display:
 
 
 
-	def validate_guess_format_template(string):
+	def validate_guess_format_template(self, astring):
 		"""uses reg ex statement that is called bibidy blop- if user input is incorrectly formated then then program 
-		flow returns to display step while alerting the user they fucked up """
-		pass
+		flow returns to display step while alerting the user they fucked up. Takes in a string and returns a list or nothing."""
+		formatted_output = []
+		#WE MUST GO BACK AND ADD MORE REGEX TO VERIFY USER INPUT!!!!!
+
+		#but to hell with it. Split the list by spaces.
+		formatted_output = astring.split()
+
+
+		return formatted_output
 
 
 
