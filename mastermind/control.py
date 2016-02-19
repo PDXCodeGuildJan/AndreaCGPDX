@@ -22,11 +22,12 @@ class Round:
 	""""""
 
 def main():
-	
 
 	the_display = Display()
 	a_model = ModelStuff()
+	a_model.juggle_the_masters_ballz()
 	print(the_display.draw_masters_ballz(a_model.masters_ballz))
+	###########################################################################
 	# calling a method from display object 
 	#create a new guess object by using the input from the display.
 	styrofoam_cup = the_display.get_user_guess()
@@ -35,10 +36,12 @@ def main():
 	print(a_model.turn)
 	#a_model.all_guesses[a_model.turn] = 
 	x = Guess(styrofoam_cup)
-	
-	print(x)#a_model.all_guesses[a_model.turn])
 
+	"""the above code acomplishes passing a valid formated list on balls into a guess object """
 	
+	print(x.this_guess)#a_model.all_guesses[a_model.turn])
+###############################################################################
+	print (the_display.draw_win())
 
 if __name__ == '__main__':
 	main()
