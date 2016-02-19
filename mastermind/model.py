@@ -63,8 +63,8 @@ class PegBin:
 
 class Guess:
 	"""bundels the users correctly formated ball guess along with the peg bin scoring of said guess"""
-	def __init__(self):
-		self.this_guess = []
+	def __init__(self, alist):
+		self.this_guess = alist
 		self.a_peg_bin = PegBin()
 		self.guess_number = 0
 
