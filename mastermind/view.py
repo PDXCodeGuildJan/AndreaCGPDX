@@ -36,7 +36,9 @@ class Display:
 
 	def draw_win(self):
 		"""When player wins a display message will pop up that indicates win. Initiate prompt to play another round or quit"""
-		pass 
+
+		return "Winner Winner... chicken dinner. (*Disclaimer: We don't provide chicken dinners!*) Enough pluck to try your luck again? or are you a quitter?"
+		 
 	
 	def draw_loser(self):
 		"""When player has reached the maximun amount og guesses a message will appear to denote losing"""
