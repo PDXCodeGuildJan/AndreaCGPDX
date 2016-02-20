@@ -27,7 +27,7 @@ class Game:
 		print(x.this_guess)#a_model.all_guesses[a_model.turn])
 ###############################################################################
 		print(self.the_display.draw_win())
-		
+
 
 
 
@@ -44,8 +44,13 @@ class Game:
 
 def main():
 
-	a_game = Game()
-	a_game.start_round()
+	quit_or_not = "not"
+
+	while quit_or_not != 'I suck.':
+		a_game = Game()
+		a_game.start_round()
+		quit_or_not = input()
+	
 
 
 
