@@ -72,13 +72,13 @@ class Guess:
 
 def main():
 	"""Testing shit"""
-	some_ball = Ballz()
-	a_model = ModelStuff()
-	some_peg_bin = PegBin()
-	some_guess = Guess()
-	print(a_model.masters_ballz[0].color)
-	a_model.juggle_the_masters_ballz()
-	print(a_model.masters_ballz[0].color)
+	#some_ball = Ballz()
+	#a_model = ModelStuff()
+	#some_peg_bin = PegBin()
+	#some_guess = Guess()
+	#print(a_model.masters_ballz[0].color)
+	#a_model.juggle_the_masters_ballz()
+	#print(a_model.masters_ballz[0].color)
 
 
 
