@@ -49,7 +49,7 @@ def main():
 	while quit_or_not != 'I suck.':
 		a_game = Game()
 		a_game.start_round()
-		quit_or_not = input()
+		quit_or_not = input(">>>")
 	
 
 

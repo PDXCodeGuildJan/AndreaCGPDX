@@ -37,7 +37,10 @@ class Display:
 	def draw_win(self):
 		"""When player wins a display message will pop up that indicates win. Initiate prompt to play another round or quit"""
 
-		return "Winner Winner... chicken dinner. (*Disclaimer: We don't provide chicken dinners!*) Enough pluck to try your luck again? or are you a quitter? Then enter 'I suck.' so you can quit. >>>"
+		return "Winner Winner... chicken dinner."\
+			"\n(*Disclaimer: We don't provide chicken dinners!*)"\
+			"\nEnough pluck to try your luck again? or are you a quitter?"\
+		 	"\nThen enter 'I suck.' so you can quit."\
 		 
 	
 	def draw_loser(self):
@@ -51,7 +54,7 @@ class Display:
 		seperated list of the displaynames of the balls (4). It will return a string. There
 		needs to be a prompt for the correct format of input. """
 
-		user_input = input()
+		user_input = input(">>>")
 		return user_input 
 
 
