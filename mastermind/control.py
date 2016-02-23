@@ -28,7 +28,7 @@ class Game:
 ###############################################################################
 		print(self.the_display.draw_win())
 		print(self.the_display.draw_welcome())
-
+		print(self.the_display.draw_loser())
 
 
 

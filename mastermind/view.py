@@ -111,7 +111,8 @@ Welcome to Mastermind! Easy to learn. Easy to play. Not so easy to win! In this 
 	
 	def draw_loser(self):
 		"""When player has reached the maximun amount og guesses a message will appear to denote losing"""
-		pass
+		return "You loser."
+	
 	def get_play_or_quit(self):
 
 		pass
