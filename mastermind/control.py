@@ -27,6 +27,7 @@ class Game:
 		print(x.this_guess)#a_model.all_guesses[a_model.turn])
 ###############################################################################
 		print(self.the_display.draw_win())
+		print(self.the_display.draw_welcome())
 
 
 
