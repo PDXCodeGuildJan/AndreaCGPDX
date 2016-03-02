@@ -4,7 +4,7 @@ class Ballz:
 	"""represents a single ball"""
 	def __init__(self, color_str = "black"):
 		"""the defult color for the ball is black"""
-		self.balls_representation = {"blue":"blu", "yellow":"yel", "red":"red", "green":"gre", "white":"wht", "black":"blk"}
+		self.balls_representation = {"blue":"blu", "yellow":"yel", "red":"red","green":"gre", "white":"wht", "black":"blk"}
 		self.color = self.balls_representation[color_str]
 	def __str__(self):
 		return self.color
@@ -27,15 +27,17 @@ class ModelStuff:
 		self.wins_n_losses = 0
 		self.turn = 0
 		self.masters_ballz = [Ballz(),Ballz(),Ballz(),Ballz()]
-		self.welcome_n_instructions = "Welcome? Finish me!"
+		#self.welcome_n_instructions = "Welcome? Finish me!"
 		self.all_guesses = []
 
 	def elvaluate_guess(self, alist_of_ballz):
-		"""This method evaluates the guess for correctness or incorrectness against the masters_ballz"""
+		"""This method evaluates the guess for correctness or incorrectness 
+		against the masters_ballz"""
 		pass
 
 	def juggle_the_masters_ballz(self):
-		"""hard codes juggling each ball in masters_ballz indivdually. The function could be improved 
+		"""hard codes juggling each ball in masters_ballz indivdually. The 
+		function could be improved 
 		by looping thru for the length of masters_ballz."""
 
 		self.masters_ballz[0].juggle_the_ball()
@@ -44,8 +46,8 @@ class ModelStuff:
 		self.masters_ballz[3].juggle_the_ball()
 
 class PegBin:
-	"""peg bin is a very important data object that allows the controler t preform the tricky parts 
-	of our game logic"""
+	"""peg bin is a very important data object that allows the controler to
+	 preform the tricky parts of our game logic"""
 	def __init__(self):
 		pegs = []
 
@@ -58,11 +60,13 @@ class PegBin:
 		pass
 
 	def sort_pegs(self):
-		"""This sorts the pegs in a way that does not give the position of the masters_ballz"""
+		"""This sorts the pegs in a way that does not give the position of the
+		masters_ballz"""
 		pass
 
 class Guess:
-	"""bundels the users correctly formated ball guess along with the peg bin scoring of said guess"""
+	"""Bundels the users correctly formated ball guess along with the peg bin 
+	scoring of said guess"""
 	def __init__(self, alist):
 		self.this_guess = alist
 		self.a_peg_bin = PegBin()
