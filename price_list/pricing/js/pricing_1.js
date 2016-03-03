@@ -10,7 +10,7 @@ var removeStockButton = document.getElementById("remove-stock");
 removeStockButton.onclick = removeStock;
 
 var deleteItemButton = document.getElementById("del-item");
-deleteItemButton.onclick = Delete;
+deleteItemButton.onclick = deleteItem;
 
 document.getElementById("del-item").addEventListener('click', deleteItem);
 
@@ -66,7 +66,7 @@ function removeStock() {
 function addItem() {
    var materialName = document.getElementById("name").value;
    var price = document.getElementById("price").value;
-   var inStock = document.getElementById("in-stock").checked;
+   var inStock = document.getElementById("in_stock").checked;
 
    // Create a new instance of the Product 
    // object with the new Item's info
