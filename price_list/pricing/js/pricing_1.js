@@ -232,8 +232,9 @@ function loadDataWithAJAX(){
          var prodJSON = (request.responseText)
         products = JSON.parse(prodJSON);
          displayInventory();
+      }
    }
-}
 
-request.send(); 
+
+   request.send(); 
 }
