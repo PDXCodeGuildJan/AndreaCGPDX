@@ -14,7 +14,7 @@ deleteItemButton.onclick = deleteItem;
 
 document.getElementById("del-item").addEventListener('click', deleteItem);
 
-window.onload = loadData;
+window.onload = loadDataWithAJAX;
 
 
 // Initialize the global variable that stores the inventory.
@@ -218,4 +218,21 @@ function loadData(){
    displayInventory();
 
 }
+/** load data from json file on the server with ajax**/
+function loadDataWithAJAX(){
 
+
+   //create a new XMLHTTPrequest
+   var request = new XMLHttpRequest();
+   //add ta call info 
+   request.open('GET', 'data.json', true);
+   //setup the onload function 
+   request.onload = function(){
+      if (request.status === 200){
+         console.log(request.responseText)
+      }
+   }
+
+
+request.send(); 
+}
