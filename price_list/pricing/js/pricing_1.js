@@ -9,7 +9,11 @@ addStockButton.onclick = addStock;
 var removeStockButton = document.getElementById("remove-stock");
 removeStockButton.onclick = removeStock;
 
+var deleteItemButton = document.getElementById("del-item");
+deleteItemButton.onclick = Delete;
+
 document.getElementById("del-item").addEventListener('click', deleteItem);
+
 window.onload = loadData;
 
 
@@ -205,6 +209,13 @@ function loadData(){
    console.log("Loaded data", productJSON);
 
    product = JSON.parse(productJSON);
-   console.log(products)
+   console.log(products);
+
+      if (!products){
+         products = [];
+
+   }
+   displayInventory();
+
 }
 
