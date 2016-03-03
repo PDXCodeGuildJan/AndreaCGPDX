@@ -229,10 +229,11 @@ function loadDataWithAJAX(){
    //setup the onload function 
    request.onload = function(){
       if (request.status === 200){
-         console.log(request.responseText)
-      }
+         var prodJSON = (request.responseText)
+        products = JSON.parse(prodJSON);
+         displayInventory();
    }
-
+}
 
 request.send(); 
 }
